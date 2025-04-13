@@ -23,9 +23,7 @@ class Habit(models.Model):
         verbose_name="Время выполнения привычки",
     )
     action = models.CharField(max_length=250, verbose_name="Действие")
-    nice_habit = models.BooleanField(
-        default=False, verbose_name="Признак приятной привычки"
-    )
+    nice_habit = models.BooleanField(default=False, verbose_name="Признак приятной привычки")
     related_habit = models.ForeignKey(
         "self",
         on_delete=models.SET_NULL,

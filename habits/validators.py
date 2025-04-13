@@ -21,11 +21,7 @@ class HabitValidators:
             raise ValidationError("У приятной привычки не должно быть вознаграждения")
 
         if val.get("nice_habit") is True and val.get("related_habit"):
-            raise ValidationError(
-                "У приятной привычки не должно быть связанной привычки"
-            )
+            raise ValidationError("У приятной привычки не должно быть связанной привычки")
 
         if val.get("periodicity") < 1 or val.get("periodicity") > 7:
-            raise ValidationError(
-                "Периодичность выполнения должна быть не менее 1 раз в 7 дней"
-            )
+            raise ValidationError("Периодичность выполнения должна быть не менее 1 раз в 7 дней")

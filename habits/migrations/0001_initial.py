@@ -37,22 +37,16 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "time",
-                    models.DateTimeField(
-                        blank=True, null=True, verbose_name="Время выполнения привычки"
-                    ),
+                    models.DateTimeField(blank=True, null=True, verbose_name="Время выполнения привычки"),
                 ),
                 ("action", models.CharField(max_length=250, verbose_name="Действие")),
                 (
                     "nice_habit",
-                    models.BooleanField(
-                        default=False, verbose_name="Признак приятной привычки"
-                    ),
+                    models.BooleanField(default=False, verbose_name="Признак приятной привычки"),
                 ),
                 (
                     "periodicity",
-                    models.PositiveIntegerField(
-                        default=1, verbose_name="Периодичность"
-                    ),
+                    models.PositiveIntegerField(default=1, verbose_name="Периодичность"),
                 ),
                 (
                     "reward",
@@ -69,9 +63,7 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "is_public",
-                    models.BooleanField(
-                        default=False, verbose_name="Признак публичности"
-                    ),
+                    models.BooleanField(default=False, verbose_name="Признак публичности"),
                 ),
                 (
                     "owner",
